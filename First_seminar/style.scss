@@ -1,0 +1,45 @@
+@import "vars";
+
+@mixin flex(){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+%font{
+    font-family: sans-serif;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+h1 span{
+    color: $textColor;
+}
+
+.nav{
+   display: flex;
+    gap:$gapLink;
+
+    &__link{
+        @extend %font;
+        text-decoration: none;
+    }
+}
+
+.content{
+    @include flex();
+    gap: $gapLink;
+    &__item{
+        width: $widhtSite/4;        
+        border: $borderBlock;
+        height: 200px;
+    }
+}

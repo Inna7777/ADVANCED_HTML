@@ -1,0 +1,47 @@
+@import 'vars';
+
+@mixin flex($bg){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg;
+}
+%font{
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner{
+    text-align: center;
+    &__span{
+        color: $colorTextTutle;
+        font-size: 50px;
+    }
+}
+
+.nav{
+    display: flex;
+    gap:$gapNav;
+    &__link{
+        text-decoration: none;
+        font-size: 40px;
+        @extend %font;
+    }
+}
+
+.content{
+    @include flex(#b7d8f0);
+    gap:$gapNav;
+    &__item{
+        height: 200px;
+        width: $widthSite/4;
+        border: $border;
+    }
+}
+

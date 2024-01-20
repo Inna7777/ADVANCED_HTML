@@ -1,0 +1,40 @@
+.nav__link {
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner {
+  text-align: center;
+}
+.conteiner__span {
+  color: #75ec65;
+  font-size: 50px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+.nav__link {
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #b7d8f0;
+  gap: 16px;
+}
+.content__item {
+  height: 200px;
+  width: 300px;
+  border: 1px solid #e19613;
+}/*# sourceMappingURL=styl.css.map */
