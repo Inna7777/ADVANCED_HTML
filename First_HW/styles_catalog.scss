@@ -5,9 +5,15 @@
     justify-content: space-between;
     align-items: center;
 }
-*{
-    margin: 0;
-    padding: 0;
+@mixin padingLR($pl, $pr){
+    padding-left: $pl;
+    padding-right: $pr;
+}
+@mixin flexCenter(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 body{
@@ -18,8 +24,7 @@ body{
 .header_lineLight{
     background-color: $colorBgLight;
     @include flex();
-    padding-left: 230px;
-    padding-right: 230px;
+    @include padingLR(15%, 15% )
 }
 .header_lineLight_textLeft{
     color: $colorDetails;
@@ -36,7 +41,103 @@ body{
     color: $colorDetails;
     font-weight: 700;
 }
+.swiper{
+    background-color: $colorBgCard;
+}
 
-.adress_text p{
-    margin: 0;
+.carousel{
+    &-inner{
+        width: 50%!important;
+        height: auto;
+        overflow: visible !important;
+        display: flex;
+        justify-content: center;
+    }
+    &-control-prev{
+        justify-content: start !important;
+    }
+    &-control-next{
+      
+        justify-content: end !important;
+    }
+    &-control-prev-icon{
+        background-image: url(./img_catalog/arrow_prev.svg) !important;
+    } 
+    &-control-next-icon{
+        background-image: url(./img_catalog/right_next.svg) !important;
+    }
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: rgb(201, 195, 195);
+    }
+.modal-dialog{
+    @include flexCenter();
+    .modal-block{
+        width: 85%;
+        @include flexCenter();
+    }
+    pointer-events: auto !important;
+
+    .oneline {
+        width: 10%;
+        height: 2px;
+        background-color: $colorDetails;
+        margin-bottom: 12px;
+      }
+
+      .tooline {
+        width: 90%;
+        height: 1px;
+        background-color: rgb(177, 176, 176);
+        margin-bottom: $pading * 11;
+      }
+    .product-categoria{
+        color: $colorDetails;
+        padding-top: $pading * 11;
+        padding-bottom: 12px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .product-name{
+        color: $colorGrey;
+        padding-bottom: $pading * 8;
+    }
+    .product-description{
+        text-align: center;
+        color: $colorGrey;
+        padding-bottom: $pading * 5;
+    }
+    .product-price{
+        color: $colorDetails;
+        font-weight: 300;
+        font-size: 24px;
+        padding-bottom: $pading * 11;
+    }
+    .buttonBloc_button {
+            margin-bottom: $pading * 11;
+        }
+    }
+.buttonBloc_button img{
+     transition: 0.5s; 
+    }
+          
+.buttonBloc_button:hover img {
+    filter:invert(100%);
+ }
+          
+.modal-navbar{
+    display: flex;
+    flex-direction: row;
+    gap:22px;
+    color: $colorGrey;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: $pading * 8;
+  }
+.content{
+    padding-top: 128px;
+    padding-bottom: 128px ;
+
 }

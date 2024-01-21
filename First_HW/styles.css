@@ -11,8 +11,8 @@ body {
   background-color: #222;
   padding-top: 18px;
   padding-bottom: 20px;
-  padding-left: 230px;
-  padding-right: 230px;
+  padding-left: 15%;
+  padding-right: 15%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -197,6 +197,7 @@ body {
 .buttonBloc_button:hover {
   background-color: #F16D7F;
   color: #F1E4E6;
+  transition: 0.5s;
 }
 
 .footer_black_block {
@@ -316,8 +317,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-left: 230px;
-  padding-right: 230px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .footer_lower_block .adress_text {
   width: 332px;

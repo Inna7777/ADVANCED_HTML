@@ -23,7 +23,7 @@ body {
     background-color: $colorBgDark;
     padding-top: 18px;
     padding-bottom: 20px;
-    @include paddingLR(230px, 230px);
+    @include paddingLR(15%, 15%);
     @include flex();    
     &_imgLeft {
         display: flex;
@@ -205,6 +205,7 @@ body {
     &_button:hover {
     background-color: $colorDetails;
     color: $colorBgLight;
+    transition: 0.5s; 
 }
 }
 
@@ -328,7 +329,7 @@ body {
 .footer_lower_block {
     background-color: $colorBgDark;
     @include flex();
-    @include paddingLR(230px, 230px );
+    @include paddingLR(15%, 15% );
     .adress_text {
         width: 332px;
         padding-top: 30px;
