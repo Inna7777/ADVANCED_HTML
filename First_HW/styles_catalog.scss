@@ -1,0 +1,42 @@
+@import 'vars';
+@mixin flex(){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header_lineLight{
+    background-color: $colorBgLight;
+    @include flex();
+    padding-left: 230px;
+    padding-right: 230px;
+}
+.header_lineLight_textLeft{
+    color: $colorDetails;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 60px;
+    padding-bottom: 60px;    
+}
+
+.nav-link {   
+    padding: 0 !important;
+}
+.nav-link.active{   
+    color: $colorDetails;
+    font-weight: 700;
+}
+
+.adress_text p{
+    margin: 0;
+}
