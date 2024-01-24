@@ -37,22 +37,3 @@
         background-color: $colorDetails;
     }
 }
-
-.header_lineLight {
-    background-color: $colorBgLight;
-    @include flex();
-    @include padingLR(15%, 15%);
-
-    &_textLeft {
-        color: $colorDetails;
-        font-size: 24px;
-        font-weight: 400;
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-}
-
-// .nav-link .active {
-//     color: $colorDetails;
-//     font-weight: 700;
-// }
