@@ -54,7 +54,8 @@ body {
   background-image: url(./img_catalog/right_next.svg) !important;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   background-color: rgb(201, 195, 195);
 }
 
@@ -80,32 +81,32 @@ body {
   width: 90%;
   height: 1px;
   background-color: rgb(177, 176, 176);
-  margin-bottom: 66px;
+  margin-bottom: 132px;
 }
 .modal-dialog .product-categoria {
   color: #F16D7F;
-  padding-top: 66px;
+  padding-top: 132px;
   padding-bottom: 12px;
   font-weight: 300;
   font-size: 14px;
 }
 .modal-dialog .product-name {
   color: #8e8d8d;
-  padding-bottom: 48px;
+  padding-bottom: 96px;
 }
 .modal-dialog .product-description {
   text-align: center;
   color: #8e8d8d;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .modal-dialog .product-price {
   color: #F16D7F;
   font-weight: 300;
   font-size: 24px;
-  padding-bottom: 66px;
+  padding-bottom: 132px;
 }
 .modal-dialog .buttonBloc_button {
-  margin-bottom: 66px;
+  margin-bottom: 132px;
 }
 
 .buttonBloc_button img {
@@ -123,7 +124,7 @@ body {
   color: #8e8d8d;
   font-size: 14px;
   font-weight: 400;
-  padding-bottom: 48px;
+  padding-bottom: 96px;
 }
 
 .content {

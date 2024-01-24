@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 100px;
+    background-color: rgb(170, 187, 237);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+
+
+    &-details {
+        margin-top: 30px;
+        width: 200px;
+        padding-top: 20px;
+        position: absolute;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+
+    &-details[open] {
+        color: rgb(255, 0, 60);
+        background-color: rgba(219, 224, 229, 10);
+
+    }
+
+    &-first {
+        left: 400px;
+    }
+
+
+}
+
+
+
+
+
+// summary::-webkit-datails-market {
+//     display: none;
+// }
+
+summary {
+    display: block;
+}
+
+summary::before {
+    content: '\02c5';
+    padding-right: 0.5em;
+}
+
+details[open]>summary::before {
+    content: '\02c3';
+    color: antiquewhite;
+}

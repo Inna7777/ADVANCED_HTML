@@ -12,12 +12,30 @@
     padding-right: $pr;
 }
 
+summary {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.box_content {
+    overflow: hidden;
+}
+
 .header_line {
     background-color: $colorBgDark;
     padding-top: 18px;
     padding-bottom: 20px;
     @include paddingLR(15%, 15%);
     @include flex();
+    position: relative;
 
     &_imgLeft {
         display: flex;
@@ -35,5 +53,247 @@
 
     &_imgRight img:hover {
         background-color: $colorDetails;
+    }
+}
+
+.header_lineLight {
+    background-color: $colorBgLight;
+    @include flex();
+    @include paddingLR(15%, 15%);
+
+    &_textLeft {
+        display: flex;
+        color: $colorDetails;
+        font-size: 24px;
+        font-weight: 400;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &_nav {
+        @include flex();
+
+        .active {
+            color: $colorDetails;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}
+
+.nav {
+    background-color: white;
+    box-shadow: 6px 4px 35px rgb(48, 47, 47);
+    width: 232px;
+    padding: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    transition: right 0.3s;
+}
+
+#burger {
+    //прячем checkBox
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+
+    &:checked~.nav {
+        //выключаем навигацию при нажатии на бургер
+        right: - $widthMenuBurger;
+    }
+}
+
+
+
+.nav-item {
+    list-style-type: none;
+}
+
+
+.center {
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
+}
+
+.filter-sort {
+    height: 132px;
+    position: relative;
+    display: flex;
+    gap: 16px;
+    padding-top: 51px;
+}
+
+.filter {
+    padding-top: 13px;
+    width: 380px;
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+
+    &[open] {
+        background-color: #F7E4E2;
+        box-shadow: 6px 4px 35px rgb(46, 46, 46);
+
+    }
+
+    &[open] .filter-heading {
+        color: $colorDetails;
+    }
+
+    &[open] path {
+        fill: $colorDetails;
+    }
+
+    &-summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding-left: 16px;
+
+    }
+
+    &-heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 17px;
+        color: $colorBgDark;
+    }
+
+    &-content {
+        padding: 0 16px 16px 16px;
+    }
+
+    &-item {
+        margin-top: 16px;
+    }
+
+    &-link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 24px 16px;
+    }
+
+    &_link {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $colorBgDark;
+        text-decoration: none;
+
+        &:hover {
+            color: $colorDetails;
+        }
+    }
+
+    &-head {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 17px;
+        color: $colorBgDark;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid grey;
+        border-left: 5px solid $colorDetails;
+    }
+
+    &-item[open] .filter-head {
+        color: $colorDetails;
+
+    }
+}
+
+.sort {
+    display: flex;
+    position: absolute;
+    left: 600px;
+    top: 51px;
+    gap: 20px;
+
+    &_details {
+        position: relative;
+    }
+
+    &_summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &_check {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $colorBgDark;
+
+    }
+
+    &_heading {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $colorBgDark;
+    }
+
+    &_box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: white;
+        box-shadow: 6px 4px 35px rgb(48, 47, 47);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        left: -9px;
+        top: 20px;
+
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+    gap: 30px;
+}
+
+.product {
+    background-color: #F7E4E2;
+    width: 380px;
+    height: 419px;
+
+    &_description {
+        background-color: $colorBgCard;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &_nextName {
+            color: $colorBgDark;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        &_textDescription {
+            color: #6f6f6f;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &_price {
+            color: $colorDetails;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 419px;
+        display: block;
     }
 }

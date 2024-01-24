@@ -1,83 +1,97 @@
 @import 'vars';
-@mixin flex(){
+
+@mixin flex() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-@mixin padingLR($pl, $pr){
+
+@mixin padingLR($pl, $pr) {
     padding-left: $pl;
     padding-right: $pr;
 }
-@mixin flexCenter(){
+
+@mixin flexCenter() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.header_lineLight{
+.header_lineLight {
     background-color: $colorBgLight;
     @include flex();
-    @include padingLR(15%, 15% )
+    @include padingLR(15%, 15%);
 }
-.header_lineLight_textLeft{
+
+.header_lineLight_textLeft {
     color: $colorDetails;
     font-size: 24px;
     font-weight: 400;
     padding-top: 60px;
-    padding-bottom: 60px;    
+    padding-bottom: 60px;
 }
 
-.nav-link {   
+.nav-link {
     padding: 0 !important;
 }
-.nav-link.active{   
+
+.nav-link.active {
     color: $colorDetails;
     font-weight: 700;
 }
-.swiper{
+
+.swiper {
     background-color: $colorBgCard;
 }
 
-.carousel{
-    &-inner{
-        width: 50%!important;
+.carousel {
+    &-inner {
+        width: 50% !important;
         height: auto;
         overflow: visible !important;
         display: flex;
         justify-content: center;
     }
-    &-control-prev{
+
+    &-control-prev {
         justify-content: start !important;
     }
-    &-control-next{
-      
+
+    &-control-next {
+
         justify-content: end !important;
     }
-    &-control-prev-icon{
+
+    &-control-prev-icon {
         background-image: url(./img_catalog/arrow_prev.svg) !important;
-    } 
-    &-control-next-icon{
+    }
+
+    &-control-next-icon {
         background-image: url(./img_catalog/right_next.svg) !important;
     }
 }
 
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     background-color: rgb(201, 195, 195);
-    }
-.modal-dialog{
+}
+
+.modal-dialog {
     @include flexCenter();
-    .modal-block{
+
+    .modal-block {
         width: 85%;
         @include flexCenter();
     }
+
     pointer-events: auto !important;
 
     .oneline {
@@ -85,59 +99,66 @@ body{
         height: 2px;
         background-color: $colorDetails;
         margin-bottom: 12px;
-      }
+    }
 
-      .tooline {
+    .tooline {
         width: 90%;
         height: 1px;
         background-color: rgb(177, 176, 176);
         margin-bottom: $pading * 11;
-      }
-    .product-categoria{
+    }
+
+    .product-categoria {
         color: $colorDetails;
         padding-top: $pading * 11;
         padding-bottom: 12px;
         font-weight: 300;
         font-size: 14px;
     }
-    .product-name{
+
+    .product-name {
         color: $colorGrey;
         padding-bottom: $pading * 8;
     }
-    .product-description{
+
+    .product-description {
         text-align: center;
         color: $colorGrey;
         padding-bottom: $pading * 5;
     }
-    .product-price{
+
+    .product-price {
         color: $colorDetails;
         font-weight: 300;
         font-size: 24px;
         padding-bottom: $pading * 11;
     }
+
     .buttonBloc_button {
-            margin-bottom: $pading * 11;
-        }
+        margin-bottom: $pading * 11;
     }
-.buttonBloc_button img{
-     transition: 0.5s; 
-    }
-          
+}
+
+.buttonBloc_button img {
+    transition: 0.5s;
+}
+
 .buttonBloc_button:hover img {
-    filter:invert(100%);
- }
-          
-.modal-navbar{
+    filter: invert(100%);
+}
+
+.modal-navbar {
     display: flex;
     flex-direction: row;
-    gap:22px;
+    gap: 22px;
     color: $colorGrey;
     font-size: 14px;
     font-weight: 400;
     padding-bottom: $pading * 8;
-  }
-.content{
+}
+
+.content {
     padding-top: 128px;
-    padding-bottom: 128px ;
+    padding-bottom: 128px;
 
 }

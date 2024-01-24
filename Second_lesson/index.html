@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Catalog</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -18,7 +24,18 @@
             <img src="./img/icons/icon2.svg" alt="img" />
           </div>
           <div class="header_line_imgRight">
-            <a href="#"><img src="./img/icons/hamburger.svg" alt="img" /></a>
+            <label for="burger"
+              ><img src="./img/icons/hamburger.svg" alt="img"
+            /></label>
+            <input id="burger" type="checkbox" />
+            <nav class="nav">
+              <ul>
+                <li><a href="">link</a></li>
+                <li><a href="">link</a></li>
+                <li><a href="">link</a></li>
+                <li><a href="">link</a></li>
+              </ul>
+            </nav>
             <a href="#"><img src="./img/icons/stick_man.svg" alt="img" /></a>
             <a href="#"
               ><img src="./img/icons/shopping_cart.svg" alt="img"
@@ -27,7 +44,7 @@
         </div>
         <div class="header_lineLight">
           <h3 class="header_lineLight_textLeft">NEW ARRIVALS</h3>
-          <ul class="nav">
+          <ul class="header_lineLight_nav">
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">HOME/</a>
             </li>
@@ -42,6 +59,151 @@
           </ul>
         </div>
       </header>
+      <div class="filter-sort center">
+        <details class="filter">
+          <summary class="filter-summary">
+            <span class="filter-heading">FILTER</span
+            ><svg
+              width="30"
+              height="20"
+              viewBox="0 0 64 64"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Layer_75" data-name="Layer 75">
+                <path
+                  d="m52 17.84h-40a1.5 1.5 0 0 0 0 3h40a1.5 1.5 0 0 0 0-3z"
+                />
+                <path
+                  d="m42 30.5h-30a1.5 1.5 0 0 0 0 3h30a1.5 1.5 0 0 0 0-3z"
+                />
+                <path
+                  d="m32 43.16h-20a1.5 1.5 0 0 0 0 3h20a1.5 1.5 0 0 0 0-3z"
+                />
+              </g>
+            </svg>
+          </summary>
+          <div class="filter-content">
+            <details open class="filter-item">
+              <summary class="filter-head">CATEGORY</summary>
+              <div class="filter-link-box">
+                <a href="#" class="filter_link">ITEM2</a>
+                <a href="#" class="filter_link">ITEM3</a>
+                <a href="#" class="filter_link">ITEM4</a>
+                <a href="#" class="filter_link">ITEM5</a>
+                <a href="#" class="filter_link">ITEM6</a>
+                <a href="#" class="filter_link">ITEM7</a>
+              </div>
+            </details>
+          </div>
+          <div class="filter-content">
+            <details class="filter-item">
+              <summary class="filter-head">BREND</summary>
+              <div class="filter-link-box">
+                <a href="#" class="filter_link">ITEM2</a>
+                <a href="#" class="filter_link">ITEM3</a>
+                <a href="#" class="filter_link">ITEM4</a>
+                <a href="#" class="filter_link">ITEM5</a>
+                <a href="#" class="filter_link">ITEM6</a>
+                <a href="#" class="filter_link">ITEM7</a>
+              </div>
+            </details>
+          </div>
+          <div class="filter-content">
+            <details class="filter-item">
+              <summary class="filter-head">DISIGNER</summary>
+              <div class="filter-link-box">
+                <a href="#" class="filter_link">ITEM2</a>
+                <a href="#" class="filter_link">ITEM3</a>
+                <a href="#" class="filter_link">ITEM4</a>
+                <a href="#" class="filter_link">ITEM5</a>
+                <a href="#" class="filter_link">ITEM6</a>
+                <a href="#" class="filter_link">ITEM7</a>
+              </div>
+            </details>
+          </div>
+        </details>
+        <div class="sort">
+          <details class="sort_details">
+            <summary class="sort_summary">
+              <span class="sort_heading">TRENDING NEW</span>
+            </summary>
+          </details>
+          <details class="sort_details">
+            <summary class="sort_summary">
+              <span class="sort_heading">SIZE</span>
+            </summary>
+            <div class="sort_box">
+              <div class="sort_check">
+                <input id="sort_check1" type="checkbox" /><label
+                  for="sort_check1"
+                  >XS</label
+                >
+              </div>
+              <div class="sort_check">
+                <input id="sort_check2" type="checkbox" /><label
+                  for="sort_check2"
+                  >L</label
+                >
+              </div>
+              <div class="sort_check">
+                <input id="sort_check3" type="checkbox" /><label
+                  for="sort_check3"
+                  >S</label
+                >
+              </div>
+            </div>
+          </details>
+          <details class="sort_details">
+            <summary class="sort_summary">
+              <span class="sort_heading">PRICE</span>
+            </summary>
+          </details>
+        </div>
+      </div>
+      <div class="content">
+        <div class="product">
+          <img src="./img/product1.png" alt="img" />
+          <div class="product_description">
+            <h3 class="product_description_nextName">
+              ELLERY X&nbsp;M&rsquo;O CAPSULE
+            </h3>
+            <p class="product_description_textDescription">
+              Known for her sculptural takes on&nbsp;traditional tailoring,
+              Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda
+              Operandi.
+            </p>
+            <h4 class="product_description_price">$52.00</h4>
+          </div>
+        </div>
+        <div class="product">
+          <img src="./img/product4.png" alt="img" class="product2" />
+          <div class="product_description">
+            <h3 class="product_description_nextName">
+              ELLERY X&nbsp;M&rsquo;O CAPSULE
+            </h3>
+            <p class="product_description_textDescription">
+              Known for her sculptural takes on&nbsp;traditional tailoring,
+              Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda
+              Operandi.
+            </p>
+            <h4 class="product_description_price">$52.00</h4>
+          </div>
+        </div>
+        <div class="product">
+          <img src="./img/product3.png" alt="img" />
+          <div class="product_description">
+            <h3 class="product_description_nextName">
+              ELLERY X&nbsp;M&rsquo;O CAPSULE
+            </h3>
+            <p class="product_description_textDescription">
+              Known for her sculptural takes on&nbsp;traditional tailoring,
+              Australian arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda
+              Operandi.
+            </p>
+            <h4 class="product_description_price">$52.00</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
