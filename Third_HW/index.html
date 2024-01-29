@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="box_content">
+      <header class="header">
+        <div class="header_line">
+          <div class="header_line_imgLeft">
+            <a href="index.html"
+              ><img src="./img/icons/icon1.svg" alt="img"
+            /></a>
+            <img src="./img/icons/icon2.svg" alt="img" />
+          </div>
+          <div class="header_line_imgRight">
+            <a href=""><img src="./img/icons/hamburger.svg" alt="img" /></a>
+
+            <a href="#"><img src="./img/icons/stick_man.svg" alt="img" /></a>
+            <a href="#"
+              ><img src="./img/icons/shopping_cart.svg" alt="img"
+            /></a>
+          </div>
+        </div>
+        <div class="header_lineLight">
+          <h3 class="header_lineLight_textLeft">SHOPPING CART</h3>
+        </div>
+      </header>
+      <div class="content">
+        <div class="content_product">
+          <div class="product">
+            <img src="./img/product1.png" alt="img" />
+
+            <div class="product_description">
+              <div class="product_name">
+                <h3 class="product_description_nextName">
+                  MANGO PEOPLE T-SHIRT
+                </h3>
+                <button class="product_button_clouse">X</button>
+              </div>
+              <div class="description_order">
+                <h4 class="product_description_order">
+                  Price: <span class="price_ping">$52.00</span>
+                </h4>
+                <h4 class="product_description_order">Color: Red</h4>
+                <h4 class="product_description_order">Size: lX</h4>
+                <h4 class="product_description_order">
+                  <label for="quantity1">Quantity:</label>
+                  <input
+                    id="quantity1"
+                    type="number"
+                    class="product_description_input"
+                    min="1"
+                  />
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./img/product1.png" alt="img" />
+
+            <div class="product_description">
+              <div class="product_name">
+                <h3 class="product_description_nextName">
+                  MANGO PEOPLE T-SHIRT
+                </h3>
+                <button class="product_button_clouse">X</button>
+              </div>
+              <div class="description_order">
+                <h4 class="product_description_order">
+                  Price: <span class="price_ping">$52.00</span>
+                </h4>
+                <h4 class="product_description_order">Color: Red</h4>
+                <h4 class="product_description_order">Size: lX</h4>
+                <h4 class="product_description_order">
+                  <label for="quantity2">Quantity:</label>
+                  <input
+                    id="quantity2"
+                    type="number"
+                    class="product_description_input"
+                    min="1"
+                  />
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="bloc_content_button">
+            <button class="content_button">CLEAR SHOPPING CART</button>
+            <button class="content_button">CONTINUE SHOPPING</button>
+          </div>
+        </div>
+        <div class="content_form">
+          <form action="#" class="form">
+            <h3 class="form_titul">SHIPPING ADRESS</h3>
+            <input type="text" placeholder="Bangladesh" class="form_input" />
+            <input type="text" placeholder="State" class="form_input" />
+            <input
+              type="text"
+              placeholder="Postcode / Zip"
+              class="form_input"
+            />
+            <input type="submit" class="form_button" value="GET A QUOTE" />
+          </form>
+          <div class="block_checkout">
+            <div class="block_checkout_info">
+              <h4 class="block_checkout_info1">SUB TOTAL $900</h4>
+              <h4 class="block_checkout_info2">
+                GRAND TOTAL <span>$900</span>
+              </h4>
+            </div>
+            <div class="block_checkout_button">
+              <button class="block_checkout_btn">
+                PROCEED TO&nbsp;CHECKOUT
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <section class="light_block">
+          <img
+            class="light_block_img"
+            src="./img/footer_icons/footer_fon.jpg"
+            alt=""
+          />
+          <article class="content_light_block light_block1">
+            <img src="./img/footer_icons/Intersect.png" alt="img" />
+            <h4>
+              &laquo;Vestibulum quis porttitor dui! Quisque viverra
+              nunc&nbsp;mi, a&nbsp;pulvinar purus condimentum&raquo;
+            </h4>
+          </article>
+          <article class="content_light_block light_block2">
+            <h3>SUBSCRIBE</h3>
+            <p>FOR OUR NEWLETTER AND PROMOTION</p>
+            <div class="footer_buuton">
+              <input
+                class="input_grey"
+                placeholder="Enter Your Email"
+                type="email"
+              />
+              <button class="button_ping">Subscribe</button>
+            </div>
+          </article>
+        </section>
+        <section class="lower_block">
+          <address class="adress_text">
+            <h3>&copy;&nbsp;2022 Brand All Rights Reserved.</h3>
+          </address>
+          <div class="icons">
+            <a href="#" class="icon_img">
+              <img src="./img/footer_icons/pinterest.svg" alt="img" />
+            </a>
+            <a href="#" class="icon_img">
+              <img src="./img/footer_icons/twitter.svg" alt="img" />
+            </a>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
