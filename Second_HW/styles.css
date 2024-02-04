@@ -184,7 +184,7 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns: repeat(3, 380px);
+  grid-template-columns: repeat(3, 360px);
   justify-content: center;
   gap: 30px;
   padding-top: 90px;
@@ -261,10 +261,11 @@ body {
   align-items: center;
 }
 .footer .light_block1 {
-  margin: 97px 223px 126px 228px;
   width: 358px;
   position: absolute;
   z-index: 999;
+  padding-top: 97px;
+  margin-left: 25%;
 }
 .footer .light_block1 img {
   padding-bottom: 30px;
@@ -277,8 +278,8 @@ body {
   text-align: center;
 }
 .footer .light_block2 {
-  margin-top: 150px;
-  margin-left: 811px;
+  padding-top: 155px;
+  margin-left: 50%;
   width: 557px;
   position: absolute;
   z-index: 9999;
@@ -297,11 +298,11 @@ body {
   width: 256px;
   height: 49px;
   background-color: #E1E1E1;
-  border: 0;
   border-radius: 30px 0 0 30px;
+  border: 0;
   margin: 0;
   text-align: left;
-  padding: 5px 5px 5px 10px;
+  padding: 0px 15px;
 }
 .footer .input_grey:hover {
   background-color: #c9c5c6;
@@ -329,10 +330,10 @@ body {
 .footer .lower_block {
   background-color: #222222;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 635px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .footer .adress_text {
   width: 332px;
@@ -360,4 +361,60 @@ body {
 }
 .footer .icon_img:active {
   background-color: #9f9d9d;
+}
+
+@media (max-width: 1024px) {
+  .header_line {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .header_lineLight {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .content {
+    grid-template-columns: repeat(2, 360px);
+    gap: 16px;
+    padding-top: 60px;
+  }
+  .buttonBloc {
+    margin-top: 32px;
+    margin-bottom: 65px;
+  }
+  .footer .black_block {
+    grid-template-columns: repeat(1, 380px);
+    gap: 48px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  .footer .light_block {
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+  }
+  .light_block_img {
+    width: 100%;
+    height: 200%;
+  }
+  .footer .light_block1 {
+    margin: 0;
+    padding-top: 10%;
+  }
+  .footer .light_block2 {
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 60%;
+  }
+  .footer .lower_block {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .menu-filter {
+    margin-top: 25px;
+    left: 1%;
+  }
+  .sort {
+    left: 60%;
+    padding-left: 1%;
+  }
 }/*# sourceMappingURL=styles.css.map */

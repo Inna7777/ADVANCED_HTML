@@ -1,11 +1,13 @@
 @import 'vars';
-@mixin flex(){
+
+@mixin flex() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-@mixin paddingLR($pl, $pr){
+
+@mixin paddingLR($pl, $pr) {
     padding-left: $pl;
     padding-right: $pr;
 }
@@ -13,30 +15,38 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
+
 
 .header_line {
     background-color: $colorBgDark;
     padding-top: 18px;
     padding-bottom: 20px;
     @include paddingLR(15%, 15%);
-    @include flex();    
+    @include flex();
+
     &_imgLeft {
         display: flex;
         gap: 41px;
     }
-    &_imgRight{
+
+    &_imgRight {
         display: flex;
-        gap: 41px;       
+        gap: 41px;
+
     }
-    &_imgRight img{
-        width: 30px;    
+
+    &_imgRight img {
+        width: 30px;
     }
-    &_imgRight img:hover{
+
+    &_imgRight img:hover {
         background-color: $colorDetails;
     }
 }
@@ -44,18 +54,25 @@ body {
 .header_picture {
     background-color: $colorBgLight;
     display: flex;
-    flex-wrap: wrap;
+
+    &_img {
+        background-color: #E5E5E5;
+        width: 50%;
+    }
+
+
     &_title {
         display: flex;
-        flex-direction: row;
+        width: 50%;
         gap: 16px;
         padding-top: 290px;
         padding-left: 63px;
         height: 92px;
     }
+
     &_text {
         color: $colorBgDark;
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 900;
         line-height: 40px;
         padding-top: 1%;
@@ -63,10 +80,6 @@ body {
 
 }
 
-.center {
-    padding-right: calc(50% - 800px);
-    padding-left: calc(50% - 800px);
-}
 
 .header_picture_text strong {
     font-size: 32px;
@@ -76,6 +89,7 @@ body {
 .header_picture_text span {
     color: $colorDetails;
 }
+
 .menu {
     padding-top: 65px;
     padding-bottom: 96px;
@@ -83,6 +97,7 @@ body {
     grid-template-columns: repeat(3, 380px);
     justify-content: center;
     gap: 30px;
+
     &_menuItem {
         position: relative;
         width: 100%;
@@ -101,7 +116,7 @@ body {
 .textOverlay {
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 35%;
     z-index: 1;
     color: $colorBgLight;
@@ -142,31 +157,34 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: repeat(3, 380px);
+    grid-template-columns: repeat(3, 360px);
     justify-content: center;
     gap: 30px;
 }
 
-.product{
-    &_description{ 
+.product {
+    &_description {
         background-color: $colorBgCard;
         padding: 24px 16px;
         display: flex;
         flex-direction: column;
         gap: 16px;
-        &_nextName{
+
+        &_nextName {
             color: $colorBgDark;
             font-weight: 400;
             font-size: 20px;
         }
-        &_textDescription{
+
+        &_textDescription {
             color: #6f6f6f;
             font-weight: 300;
             line-height: normal;
         }
-        &_price{
+
+        &_price {
             color: $colorDetails;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 400;
         }
     }
@@ -193,7 +211,8 @@ body {
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
-    &_button{
+
+    &_button {
         width: 212px;
         height: 48px;
         border: #F16D7F solid 1px;
@@ -202,11 +221,12 @@ body {
         font-size: 18px;
         font-weight: 400;
     }
+
     &_button:hover {
-    background-color: $colorDetails;
-    color: $colorBgLight;
-    transition: 0.5s; 
-}
+        background-color: $colorDetails;
+        color: $colorBgLight;
+        transition: 0.5s;
+    }
 }
 
 .footer_black_block {
@@ -224,66 +244,77 @@ body {
     flex-direction: column;
     align-items: center;
     color: #F7E4E2;
+
     .footer_black_block_content img {
         padding-bottom: 31px;
     }
+
     .footer_black_block_content:nth-child(2) img {
         padding-bottom: 25px;
     }
-    .heading_black {
-    padding-bottom: 16px;
-}
 
-.footer_black_block_content p {
-    padding-left: 16px;
-}
+    .heading_black {
+        padding-bottom: 16px;
+    }
+
+    .footer_black_block_content p {
+        padding-left: 16px;
+    }
 
 }
 
 .footer_light_block {
     @include flex();
+
     .light_block_img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         opacity: 0.5;
     }
+
     .content_light_block {
         display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        z-index: 9999;  
-             }    
+        z-index: 9999;
+    }
+
     .light_block1 {
         width: 358px;
-        margin-left: 230px;       
-    }    
+        margin-left: 20%;
+    }
+
     .light_block1 img {
         padding-bottom: 30px;
-    }    
+    }
+
     .light_block1 p {
         font-family: Lato;
         font-size: 20px;
         font-style: italic;
         font-weight: 400;
         text-align: center;
-    }    
+    }
+
     .light_block2 {
-        margin-left: 700px;
+        margin-left: 50%;
         width: 557px;
-    }    
+    }
+
     .light_block2 p {
         margin-bottom: 32px;
         font-family: Lato;
         font-size: 18px;
         font-style: normal;
-    }    
+    }
+
     .footer_button {
         display: flex;
         justify-content: center;
     }
-    
+
     .input_grey {
         width: 256px;
         height: 49px;
@@ -292,18 +323,18 @@ body {
         border-radius: 30px 0 0 30px;
         margin: 0;
         text-align: left;
-        padding-left:  10px;
+        padding-left: 10px;
     }
-    
+
     .input_grey:hover {
         background-color: #c9c5c6;
     }
-    
+
     .input_grey:active {
         background-color: #908d8d;
         color: #E1E1E1;
     }
-    
+
     .button_ping {
         width: 100px;
         height: 49px;
@@ -313,11 +344,11 @@ body {
         margin: 0;
         color: $colorBgCard;
     }
-    
+
     .button_ping:hover {
         background-color: #aba9a9;
     }
-    
+
     .button_ping:active {
         background-color: #f3556a;
         color: #000;
@@ -329,7 +360,8 @@ body {
 .footer_lower_block {
     background-color: $colorBgDark;
     @include flex();
-    @include paddingLR(15%, 15% );
+    @include paddingLR(15%, 15%);
+
     .adress_text {
         width: 332px;
         padding-top: 30px;
@@ -338,11 +370,13 @@ body {
         color: white;
         font-family: Lato;
         font-size: 16px;
-    }    
+    }
+
     .icons {
         display: flex;
         gap: 7px;
-    }    
+    }
+
     .icon_img {
         width: 31px;
         height: 31px;
@@ -350,18 +384,103 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-    }    
+    }
+
     .icon_img:hover {
         background-color: #F16D7F;
     }
+
     .icon_img:active {
         background-color: #9f9d9d;
-    }  
-    
+    }
+
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header_picture_img {
+        width: 50%;
+    }
+
+    .header_picture_img img {
+        width: 75%;
+    }
+
+    .header_picture_title {
+        padding-top: 10%;
+        padding-left: 3%;
+
+    }
+
+    .header_picture_text {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 30px;
 
 
 
 
+    }
 
+    .header_picture_text strong {
+        font-size: 24px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(3, 233px);
+        gap: 16px;
+    }
+
+    .textOverlay {
+        left: 20%;
+    }
+
+    .bigCard {
+        top: 35%;
+        left: 40%
+    }
+
+    .content {
+        grid-template-columns: repeat(2, 380px);
+        gap: 16px;
+    }
+
+    .buttonBloc {
+        margin-top: 32px;
+        margin-bottom: 65px;
+    }
+
+
+    .footer_black_block {
+        grid-template-columns: repeat(1, 380px);
+        gap: 48px;
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .footer_light_block {
+        flex-direction: column;
+    }
+
+    .footer_light_block .light_block1 {
+        padding-top: 10%;
+        margin-left: 0;
+    }
+
+
+
+    .footer_light_block .light_block2 {
+        margin-left: 0%;
+        padding-top: 60%;
+
+    }
+
+    .light_block_img {
+        width: 100%;
+        height: 200%;
+    }
+
+    .footer_light_block {
+        height: 90vh;
+    }
+}
