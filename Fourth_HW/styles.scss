@@ -92,10 +92,7 @@ body {
 }
 
 
-.center {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
-}
+
 
 .content {
     padding-left: 15%;
@@ -146,7 +143,7 @@ body {
         gap: 21px;
 
         .input {
-            width: 380px;
+            width: 360px;
             height: 45px;
             padding-left: 10px;
             color: $colorGrey;
@@ -202,7 +199,7 @@ body {
 
         .list_item:before {
             content: url(./img/icons/vector.svg);
-            margin-right: 10px;
+            padding-right: 10px;
         }
     }
 
@@ -211,6 +208,39 @@ body {
 
 
 .footer {
+    .black_block {
+        background-color: #222224;
+        display: grid;
+        grid-template-columns: repeat(3, 380px);
+        justify-content: center;
+        gap: 30px;
+        padding-top: 103px;
+        padding-bottom: 104px;
+    }
+
+    .content_black_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #F7E4E2;
+    }
+
+    .content_black_block img {
+        padding-bottom: 31px;
+    }
+
+    .content_black_block:nth-child(2) img {
+        padding-bottom: 25px;
+    }
+
+    .heading_black {
+        padding-bottom: 16px;
+
+    }
+
+    .content_black_block p {
+        padding-left: 16px;
+    }
 
 
     .light_block {
@@ -235,10 +265,11 @@ body {
     }
 
     .light_block1 {
-        margin: 97px 223px 126px 228px;
         width: 358px;
         position: absolute;
         z-index: 999;
+        padding-top: 97px;
+        margin-left: 25%;
 
     }
 
@@ -246,7 +277,7 @@ body {
         padding-bottom: 30px;
     }
 
-    .light_block1 h4 {
+    .light_block1 p {
         font-family: Lato;
         font-size: 20px;
         font-style: italic;
@@ -255,8 +286,8 @@ body {
     }
 
     .light_block2 {
-        margin-top: 150px;
-        margin-left: 811px;
+        padding-top: 155px;
+        margin-left: 50%;
         width: 557px;
         position: absolute;
         z-index: 9999;
@@ -272,30 +303,29 @@ body {
     .footer_button {
         display: flex;
         justify-content: center;
-        padding: 0;
     }
 
     .input_grey {
         width: 256px;
         height: 49px;
         background-color: #E1E1E1;
-        border: none;
         border-radius: 30px 0 0 30px;
+        border: 0;
+        margin: 0;
         text-align: left;
-        padding-left: 15px;
-
+        padding: 0px 15px;
     }
 
     .input_grey:hover {
         background-color: #c9c5c6;
-        transition: 0.3s;
     }
 
     .input_grey:active {
         background-color: #908d8d;
         color: #E1E1E1;
-        transition: 0.3s;
+
     }
+
 
     .button_ping {
         width: 100px;
@@ -309,22 +339,19 @@ body {
 
     .button_ping:hover {
         background-color: #aba9a9;
-        transition: 0.3s;
     }
 
     .button_ping:active {
         background-color: #f3556a;
         color: #000;
-        transition: 0.3s;
     }
 
     .lower_block {
         background-color: #222222;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 635px;
+        @include paddingLR(15%, 15%)
     }
 
     .adress_text {
@@ -353,12 +380,72 @@ body {
 
     .icon_img:hover {
         background-color: #F16D7F;
-        transition: 0.3s;
     }
 
     .icon_img:active {
         background-color: #9f9d9d;
-        transition: 0.3s;
     }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .header_line {
+
+        @include paddingLR(5%, 5%);
+    }
+
+    .header_lineLight {
+        @include paddingLR(5%, 5%);
+    }
+
+
+    .content {
+        padding-left: 2%;
+        gap: 22px
+    }
+
+    .content__information {
+        font-size: 16px;
+    }
+
+
+    .footer .black_block {
+        grid-template-columns: repeat(1, 380px);
+        gap: 48px;
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .footer .light_block {
+        flex-direction: column;
+        height: 60vh;
+        align-items: center;
+    }
+
+
+    .light_block_img {
+        width: 100%;
+        height: 200%;
+
+    }
+
+    .footer .light_block1 {
+        margin: 0;
+        padding-top: 10%;
+
+    }
+
+    .footer .light_block2 {
+        margin-top: 0;
+        margin-left: 0;
+        padding-top: 60%;
+    }
+
+    .footer .lower_block {
+        @include paddingLR(5%, 5%)
+    }
+
+
 
 }

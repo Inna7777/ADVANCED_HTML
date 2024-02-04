@@ -64,11 +64,6 @@ body {
   list-style-type: none;
 }
 
-.center {
-  padding-right: calc(50% - 600px);
-  padding-left: calc(50% - 600px);
-}
-
 .content {
   display: grid;
   grid-template-columns: repeat(1, 660px 380px);
@@ -141,19 +136,19 @@ body {
   margin-top: 72px;
   margin-bottom: 128px;
 }
-.content .content_button {
+.content__button {
   padding: 17px 40px;
   background: white;
   font-size: 14px;
   color: #8e8d8d;
   border: 1px solid #8e8d8d;
 }
-.content .content_button:hover {
+.content__button:hover {
   background-color: #F16D7F;
   color: white;
   transition: 0.3s;
 }
-.content .content_button:active {
+.content__button:active {
   background-color: #8e8d8d;
   color: white;
   transition: 0.3s;
@@ -197,30 +192,15 @@ body {
 }
 
 .content_form {
-  width: 380px;
+  width: 360px;
 }
 .content_form .form {
   display: flex;
   flex-direction: column;
   gap: 21px;
   padding-bottom: 57px;
-  transition: 0.3s;
 }
-.content_form .form .form_titul {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  color: #8e8d8d;
-}
-.content_form .form .form_input {
-  width: 370px;
-  height: 45px;
-  padding-left: 10px;
-  color: #8e8d8d;
-  border: 1px solid #8e8d8d;
-  font-size: 13px;
-}
-.content_form .form .form_button {
+.content_form .form__button {
   width: 100px;
   height: 35px;
   font-size: 11px;
@@ -230,14 +210,29 @@ body {
   background-color: white;
   border: 1px solid #8e8d8d;
 }
-.content_form .form .form_button:hover {
+.content_form .form__button:hover {
   background-color: #F16D7F;
   color: white;
+  transition: 0.3s;
 }
-.content_form .form .form_button:active {
+.content_form .form__button:active {
   background-color: #8e8d8d;
   color: white;
   transition: 0.3s;
+}
+.content_form .form_titul {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  color: #8e8d8d;
+}
+.content_form .form_input {
+  width: 350px;
+  height: 45px;
+  padding-left: 10px;
+  color: #8e8d8d;
+  border: 1px solid #8e8d8d;
+  font-size: 13px;
 }
 
 .block_checkout {
@@ -448,13 +443,31 @@ body {
     padding-right: 5%;
   }
   .content {
-    grid-template-columns: repeat(2, 360px);
-    gap: 16px;
-    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(1, 734px);
   }
-  .buttonBloc {
-    margin-top: 32px;
-    margin-bottom: 65px;
+  .content .product_description_nextName {
+    padding-right: 90px;
+  }
+  .content .bloc_content_button {
+    justify-content: center;
+    margin-bottom: 0;
+    gap: 48px;
+  }
+  .content_form {
+    display: flex;
+    gap: 15px;
+    width: 734px;
+    height: 272px;
+    margin-bottom: 126px;
+  }
+  .content_form .form {
+    width: 360px;
+    padding-bottom: 0;
+  }
+  .block_checkout {
+    margin-top: 35px;
+    margin-bottom: 20px;
   }
   .footer .black_block {
     grid-template-columns: repeat(1, 380px);
@@ -464,7 +477,7 @@ body {
   }
   .footer .light_block {
     flex-direction: column;
-    height: 90vh;
+    height: 60vh;
     align-items: center;
   }
   .light_block_img {

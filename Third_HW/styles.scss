@@ -92,12 +92,6 @@ body {
 }
 
 
-.center {
-    padding-right: calc(50% - 600px);
-    padding-left: calc(50% - 600px);
-}
-
-
 .content {
     display: grid;
     grid-template-columns: repeat(1, 660px 380px);
@@ -184,7 +178,7 @@ body {
         margin-bottom: 128px;
     }
 
-    .content_button {
+    &__button {
         padding: 17px 40px;
         background: white;
         font-size: 14px;
@@ -192,13 +186,13 @@ body {
         border: 1px solid $colorGrey;
     }
 
-    .content_button:hover {
+    &__button:hover {
         background-color: $colorDetails;
         color: white;
         transition: 0.3s;
     }
 
-    .content_button:active {
+    &__button:active {
         background-color: $colorGrey;
         color: white;
         transition: 0.3s;
@@ -256,13 +250,8 @@ body {
     }
 }
 
-
-
-
-
-
 .content_form {
-    width: 380px;
+    width: 360px;
 
     .form {
         display: flex;
@@ -270,24 +259,7 @@ body {
         gap: 21px;
         padding-bottom: 57px;
 
-
-        .form_titul {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: normal;
-            color: $colorGrey;
-        }
-
-        .form_input {
-            width: 370px;
-            height: 45px;
-            padding-left: 10px;
-            color: $colorGrey;
-            border: 1px solid $colorGrey;
-            font-size: 13px;
-        }
-
-        .form_button {
+        &__button {
             width: 100px;
             height: 35px;
             font-size: 11px;
@@ -298,14 +270,15 @@ body {
             border: 1px solid $colorGrey;
         }
 
-        transition: 0.3s;
 
-        .form_button:hover {
+
+        &__button:hover {
             background-color: $colorDetails;
             color: white;
+            transition: 0.3s;
         }
 
-        .form_button:active {
+        &__button:active {
             background-color: $colorGrey;
             color: white;
             transition: 0.3s;
@@ -313,11 +286,31 @@ body {
 
     }
 
+    .form_titul {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        color: $colorGrey;
+    }
+
+    .form_input {
+        width: 350px;
+        height: 45px;
+        padding-left: 10px;
+        color: $colorGrey;
+        border: 1px solid $colorGrey;
+        font-size: 13px;
+    }
+
+
 }
+
+
 
 .block_checkout {
     background-color: #F5F3F3;
     padding: 39px 44px 42px 44px;
+
 
 
     &_info {
@@ -570,16 +563,39 @@ body {
     }
 
     .content {
-        grid-template-columns: repeat(2, 360px);
-        gap: 16px;
-        padding-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(1, 734px);
     }
 
-    .buttonBloc {
-        margin-top: 32px;
-        margin-bottom: 65px;
+    .content .product_description_nextName {
+        padding-right: 90px;
     }
 
+    .content .bloc_content_button {
+        justify-content: center;
+        margin-bottom: 0;
+        gap: 48px;
+    }
+
+    .content_form {
+        display: flex;
+        gap: 15px;
+        width: 734px;
+        height: 272px;
+        margin-bottom: 126px;
+    }
+
+    .content_form .form {
+        width: 360px;
+        padding-bottom: 0;
+
+    }
+
+    .block_checkout {
+        margin-top: 35px;
+        margin-bottom: 20px;
+
+    }
 
     .footer .black_block {
         grid-template-columns: repeat(1, 380px);
@@ -590,7 +606,7 @@ body {
 
     .footer .light_block {
         flex-direction: column;
-        height: 90vh;
+        height: 60vh;
         align-items: center;
     }
 
