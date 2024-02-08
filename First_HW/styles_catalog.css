@@ -130,4 +130,36 @@ body {
 .content {
   padding-top: 128px;
   padding-bottom: 128px;
+}
+
+@media (max-width: 425px) {
+  .header_lineLight {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 46px;
+  }
+  .header_lineLight_textLeft {
+    padding-top: 24px;
+    padding-bottom: 0px;
+  }
+  .modal-dialog .product-categoria {
+    padding-top: 64px;
+  }
+  .modal-dialog .product-name {
+    padding-bottom: 31px;
+  }
+  .modal-dialog .product-description {
+    padding-bottom: 30px;
+  }
+  .modal-dialog .product-price {
+    padding-bottom: 30px;
+  }
+  .modal-dialog .tooline {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+  .modal-dialog .buttonBloc_button {
+    margin-bottom: 0px;
+  }
 }/*# sourceMappingURL=styles_catalog.css.map */
