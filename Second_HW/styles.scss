@@ -98,7 +98,7 @@ body {
 
     &-details {
         position: absolute;
-        width: 380px;
+        width: 360px;
         font-size: 14px;
         font-style: normal;
         font-weight: 600;
@@ -260,7 +260,7 @@ body {
     .black_block {
         background-color: #222224;
         display: grid;
-        grid-template-columns: repeat(3, 380px);
+        grid-template-columns: repeat(3, 360px);
         justify-content: center;
         gap: 30px;
         padding-top: 103px;
@@ -461,7 +461,7 @@ body {
 
 
     .footer .black_block {
-        grid-template-columns: repeat(1, 380px);
+        grid-template-columns: repeat(1, 360px);
         gap: 48px;
         padding-top: 48px;
         padding-bottom: 64px;
@@ -489,7 +489,7 @@ body {
     .footer .light_block2 {
         margin-top: 0;
         margin-left: 0;
-        padding-top: 60%;
+        padding-top: 300px;
     }
 
     .footer .lower_block {
@@ -507,6 +507,99 @@ body {
     .sort {
         left: 60%;
         padding-left: 1%;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .header_line {
+        @include paddingLR(16px, 16px);
+    }
+
+    .header_line_imgRight a:nth-child(2) {
+        display: none;
+    }
+
+    .header_line_imgRight a:nth-child(3) {
+        display: none;
+    }
+
+    .header_lineLight {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-bottom: 46px;
+
+    }
+
+    .header_lineLight_textLeft {
+        padding-top: 24px;
+        padding-bottom: 0px;
+    }
+
+    .header_lineLight_textLeft {
+        padding-top: 24px;
+        padding-bottom: 0px;
+    }
+
+    .menu-filter-summary span {
+        display: none;
+    }
+
+    .menu-filter-summary svg {
+        transform: scale(2);
+    }
+
+    .sort {
+        left: 25%;
+        padding-right: 1%;
+    }
+
+    .content {
+        grid-template-columns: repeat(1, 360px);
+        gap: 16px;
+    }
+
+    .content_black_block_content {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .footer .light_block2 {
+        width: 360px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer .light_block2 {
+        padding-top: 280px;
+    }
+
+    .adress_text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_buuton .input_grey {
+        width: 246px;
+    }
+
+    .lower_block {
+        padding-top: 43px;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer_buuton .button_ping {
+        width: 80px;
+    }
+
+    .footer_light_block .light_block2 p {
+        font-family: Lato;
+        font-size: 14px;
     }
 
 }

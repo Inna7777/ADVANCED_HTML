@@ -551,7 +551,7 @@ body {
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
 
     .header_line {
 
@@ -606,7 +606,7 @@ body {
 
     .footer .light_block {
         flex-direction: column;
-        height: 60vh;
+        height: 90vh;
         align-items: center;
     }
 
@@ -619,14 +619,14 @@ body {
 
     .footer .light_block1 {
         margin: 0;
-        padding-top: 10%;
+        padding-top: 5%;
 
     }
 
     .footer .light_block2 {
         margin-top: 0;
         margin-left: 0;
-        padding-top: 60%;
+        padding-top: 280px;
     }
 
     .footer .lower_block {
@@ -634,5 +634,133 @@ body {
     }
 
 
+
+}
+
+@media (max-width: 425px) {
+    .header_line {
+        @include paddingLR(16px, 16px);
+    }
+
+    .header_line_imgRight a:nth-child(2) {
+        display: none;
+    }
+
+    .header_line_imgRight a:nth-child(3) {
+        display: none;
+    }
+
+    .header_lineLight {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-bottom: 46px;
+
+    }
+
+    .header_lineLight_textLeft {
+        padding-top: 24px;
+        padding-bottom: 0px;
+    }
+
+    .content {
+        grid-template-columns: repeat(1, 360px);
+        gap: 32px;
+        padding-top: 39px;
+    }
+
+    .content .content_product {
+        gap: 30px;
+
+    }
+
+    .content .product {
+        gap: 0px;
+    }
+
+    .content .product img {
+        height: 188px;
+    }
+
+    .content .product_description {
+        padding: 13px;
+    }
+
+    .content .product_name {
+
+        padding-top: 0px;
+    }
+
+    .content .product_description_nextName {
+        width: 144px;
+        font-size: 16px;
+        padding-bottom: 22px;
+        padding-right: 10px;
+    }
+
+    .content .product_description_order {
+        font-size: 14px;
+        padding-top: 4px;
+
+    }
+
+    .content .bloc_content_button {
+        gap: 10px;
+    }
+
+    .content__button {
+        padding: 10px 15px;
+        font-size: 12px;
+
+    }
+
+    .content .bloc_content_button {
+
+        margin-top: 30px;
+        margin-bottom: 48px;
+    }
+
+    .content_form {
+        width: 360px;
+        height: 100vh;
+        flex-direction: column;
+
+    }
+
+    .footer .light_block2 {
+        padding-top: 280px;
+        width: 360px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+
+    .adress_text {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_buuton .input_grey {
+        width: 246px;
+    }
+
+    .lower_block {
+        padding-top: 43px;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer_buuton .button_ping {
+        width: 80px;
+    }
+
+    .footer_light_block .light_block2 p {
+        font-family: Lato;
+        font-size: 14px;
+    }
 
 }

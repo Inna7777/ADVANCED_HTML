@@ -459,10 +459,11 @@ body {
 
     .footer_light_block {
         flex-direction: column;
+        height: 100vh;
     }
 
     .footer_light_block .light_block1 {
-        padding-top: 10%;
+        padding-top: 5%;
         margin-left: 0;
     }
 
@@ -470,7 +471,7 @@ body {
 
     .footer_light_block .light_block2 {
         margin-left: 0%;
-        padding-top: 50%;
+        padding-top: 280px;
 
     }
 
@@ -479,12 +480,10 @@ body {
         height: 200%;
     }
 
-    .footer_light_block {
-        height: 100vh;
-    }
+
 }
 
-@media (min-width: 375px) and (max-width: 425px) {
+@media (max-width: 425px) {
     .header_line {
         @include paddingLR(16px, 16px);
     }
@@ -563,7 +562,7 @@ body {
     }
 
     .footer_light_block .light_block2 {
-        padding-top: 80%;
+        padding-top: 280px;
         width: 375px;
         padding-left: 0;
         padding-right: 0;
